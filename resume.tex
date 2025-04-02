@@ -1,0 +1,107 @@
+%-------------------------
+% Original work by: https://github.com/subidit/rover-resume
+%
+% Shows code for various formatting options for different resume sections.
+% Education and Projects have single-line headers; while Experience uses double-line.
+% Some formatting codes are kept inline; consider \newcommand{cmd}{def}.
+% Excludes hyperref and icons for readability; MVP version.
+% Explore other templates for more options.
+% Mix and match as desired. Be consistent with headers and sub-headers.
+%------------------------
+
+\documentclass[11pt]{article} % fontsize 10pt/11pt/12pt
+
+\usepackage[margin=1in, a4paper]{geometry}
+\setcounter{secnumdepth}{0} % remove section numbering
+\usepackage{titlesec}
+\usepackage[bookmarks=false,colorlinks, urlcolor=black]{hyperref}
+\titlespacing{\subsection}{0pt}{*0}{*0} % remove vertical spacing above and below
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\large\bfseries\uppercase}{}{}{}[\titlerule]
+\titleformat*{\subsubsection}{\large\itshape}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep,left=0pt .. \parindent}
+\pagestyle{empty} % remove page number
+\pdfgentounicode=1
+
+
+\begin{document}
+
+\begin{center}
+	\begin{minipage}{0.5\textwidth}
+		{\Huge\bfseries
+			Akira Taguchi % Name Here
+		} \\ \medskip
+		Programmer % Title [optional]
+	\end{minipage} \hfill
+	\begin{minipage}{0.4\textwidth}
+		\raggedleft
+		\href{mailto:akirahattivatti@gmail.com}{akirahattivatti@gmail.com} \\
+		\href{tel:+358400170704}{+358 400 170 704} \\
+		\href{https://www.linkedin.com/in/akirataguchi/}{linkedin.com/in/akirataguchi/} \\
+		\href{https://github.com/akirataguchi115/}{github.com/akirataguchi115/}
+	\end{minipage}
+\end{center}
+
+\section{Experience}
+%=================%
+\subsection{Telefonaktiebolaget LM Ericsson \hfill May 2023 - Aug 2023}
+\subsubsection{Research Trainee \hfill  Espoo}
+\begin{itemize}
+  \item Drove the 6G development further in an IoT team
+  \item Harnessed cutting-edge technology including WASM and containerization tools
+	\item Applied the agile framework to the needs of a researcher
+\end{itemize}
+
+\subsection{Napa Oy \hfill Apr 2022 - Aug 2022}
+\subsubsection{Developer Trainee \hfill Helsinki}
+\begin{itemize}
+	\item Contributed to cargo ship weather routing for reducing emissions and enhancing safety
+	\item AngularJS, .NET, Docker
+\end{itemize}
+
+\subsection{Elisa Oy \hfill Jun 2021 - Aug 2021}
+\subsubsection{Software Engineering Trainee \hfill Helsinki}
+\begin{itemize}
+	\item Worked on network automation and graph databases in the EDN team
+	\item Neo4J, Kotlin, Go
+\end{itemize}
+
+\section{Education}
+%=================%
+\subsection{University of Helsinki, Finland $|$ {\normalfont\itshape Master of Science} \hfill 2025}
+\begin{itemize}
+	\item Study track: Software
+	\item Master's thesis on open source and software freedom
+  \item Related Coursework: Datastructures and algorithms, 45 ECTS credits of pure mathematics, Malware analysis and reverse engineering
+\end{itemize}
+
+\section{Certification \& Awards}
+%===============================%
+\begin{enumerate}[label=\null, left=0pt..0pt, itemsep=0pt]
+	\item \href{https://studies.cs.helsinki.fi/stats/api/certificate/docker2021/en/6432ff37598eb056cb40b1c54bf1253e}{DevOps with Docker} \hfill 2021
+	\item \href{https://certificates.mooc.fi/validate/a4wa1ljd0ir}{Securing software} \hfill 2021
+\end{enumerate}
+
+\section{Skills \& Interests}
+%===========================%
+\begin{description}[itemsep=0pt]
+	\item[Technical] Fullstack, OOP, Haskell, C, SQL, NoSQL (document, graph), DevOps
+	\item[Language] Finnish (native), English (fluent), Swedish (conversational)
+	\item[Interests] Video games, active lifestyle, psychology, animal rights
+\end{description}
+
+\section{Projects}
+%=================
+\subsection{rencode $|$ \normalfont \textit{\href{https://github.com/akirataguchi115/rencode}{github.com/akirataguchi115/rencode}} \hfill 2025}
+\begin{itemize}
+  \item Transcode AV1 encoded videos to H.264
+  \item WebAssembly, JavaScript, Browser extension, FFmpeg
+\end{itemize}
+
+\subsection{Writing course material $|$ \normalfont \textit{Computing tools for CS studies} \hfill 2024}
+\begin{itemize}
+  \item Taught university students about static web pages
+\end{itemize}
+
+\end{document}
