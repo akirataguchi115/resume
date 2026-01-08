@@ -1,3 +1,6 @@
-Install TeX Live (tug.org/texlive/) then
+Debian:
+```
+sudo apt install texlive-full
+```
 
-```latexmk```
+then build with LaTeX Workshop extension in VSCode
